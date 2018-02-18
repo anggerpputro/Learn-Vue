@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>VueJS Tutorials</title>
+
+		<link rel="stylesheet" href="style.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+	</head>
+	<body>
+		<div id="vue-app">
+			<!-- Vue Data & Methods -->
+			<h1>{{ sapa('Malam') }}</h1>
+			<p>Nama: {{ nama }}</p>
+			<p>Pekerjaan: {{ pekerjaan }}</p>
+
+			<!-- Vue Data Binding -->
+			<h4>Data Binding</h4>
+			<p>Website: <a v-bind:href="website">{{ website }}</a> </p>
+
+			<!-- Vue Events -->
+			<h4>Events</h4>
+			<p>Umur Saya: {{ umur }} tahun</p>
+			<p>
+				<button v-on:click="tambahUmur()">Tambah 1 Tahun</button>
+				<button v-on:click="kurangUmur()">Kurang 1 Tahun</button>
+				<button v-on:dblclick="tambahUmur(10)">Tambah 10 Tahun</button>
+				<button v-on:dblclick="kurangUmur(10)">Kurang 10 Tahun</button>
+			</p>
+			<div id="canvas" v-on:mousemove="updateXY">{{ X }}, {{ Y }}</div>
+
+			<!-- Vue 2-Way Data Binding -->
+			<h4>2-Way Data Binding</h4>
+			<p>
+				Alamat: <input type="text" v-model="alamat">
+				<span>{{ alamat }}</span>
+			</p>
+
+			<!-- Computed Properties -->
+			<h4>Computed Properties</h4>
+			<p>
+				<button type="button" v-on:click="a++">Tambah A</button>
+				<button type="button" v-on:click="b++">Tambah B</button>
+				<button type="button" v-on:click="c++">Tambah C</button>
+			</p>
+			<p>Umur + A = {{ addToA() }}</p>
+			<p>Umur + B = {{ addToB() }}</p>
+			<p>Umur + C = {{ addToC }}</p>
+
+			<!-- Dynamic CSS Classes -->
+			<h4>Dynamic CSS</h4>
+			<button v-on:click="nearby = !nearby">Toggle Nearby</button>
+			<button v-on:click="available = !available">Toggle Available</button>
+			<div v-bind:class="compClasses">
+				<span>Angger</span>
+			</div>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
