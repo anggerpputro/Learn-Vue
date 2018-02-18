@@ -15,15 +15,15 @@ Vue.component('greeting', {
 var one = new Vue({
 	el: '#vue-app-one',
 	data: {
-		title: 'App One',
+		input: '',
 	},
 	methods: {
-
+		submit: function(){
+			console.log(this.$refs);
+			this.input = this.$refs.input.value;
+		}
 	},
 	computed: {
-		greet: function(){
-			return 'Hello from App One';
-		}
 	}
 });
 

@@ -10,10 +10,15 @@
 
 	</head>
 	<body>
-		<h1>Vue Components</h1>
+		<h1>Vue Refs</h1>
 
 		<div id="vue-app-one">
-			<greeting></greeting>
+			<input type="text" ref="input">
+			<button v-on:click="submit">Submit</button>
+			<p>Input: {{ input }}</p>
+			<div ref="test">
+				Test yo
+			</div>
 		</div>
 
 		<div id="vue-app-two">
