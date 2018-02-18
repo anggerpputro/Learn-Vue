@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>Vue.js</h1>
+		<h1>Vue.js App</h1>
 		<mycontent></mycontent>
 	</div>
 </template>
@@ -18,3 +18,9 @@ export default {
 	},
 }
 </script>
+
+<style scoped>
+h1{
+	color:green;
+}
+</style>
