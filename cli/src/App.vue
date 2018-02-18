@@ -1,21 +1,20 @@
 <template>
 	<div>
 		<h1>Vue.js</h1>
-		<p>{{ greeting() }}</p>
+		<mycontent></mycontent>
 	</div>
 </template>
 
 <script>
+import Content from './Content.vue'
+
 export default {
+	components: {
+		'mycontent': Content
+	},
 	data () {
 		return {
-			name: 'Angger'
     	}
 	},
-	methods: {
-		greeting: function(){
-			return 'Hello ' + this.name;
-		}
-	}
 }
 </script>
