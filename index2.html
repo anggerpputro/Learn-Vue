@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Learn VueJS - Part 2</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- Looping -->
+			<h4>Looping</h4>
+			<ul>
+				<li v-for="person in persons">{{ person }}</li>
+			</ul>
+			<ul>
+				<li v-for="(nation, index) in nations">{{index}}. {{ nation.name }}: {{ nation.capital }}</li>
+			</ul>
+			<template v-for="(nation, index) in nations">
+				<template v-for="(val, key) in nation">
+					<p>{{ index }}. {{ key }}: {{ val }}</p>
+				</template>
+			</template>
+		</div>
+
+		<script src="app2.js"></script>
+	</body>
+</html>
