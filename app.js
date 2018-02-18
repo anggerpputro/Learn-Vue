@@ -1,64 +1,31 @@
-new Vue({
-	el: '#vue-app',
+var one = new Vue({
+	el: '#vue-app-one',
 	data: {
-		nama: 'Angger',
-		pekerjaan: 'Programmer',
-		// Data Binding
-		website: 'http://facebook.com',
-		// Events
-		umur: 24,
-		X: 0,
-		Y: 0,
-		// 2-Way Data Binding
-		alamat: '',
-		// Computed Properties
-		a: 0,
-		b: 0,
-		c: 0,
-		// Dynamic CSS Classes
-		nearby: false,
-		available: false,
-		// Conditionals
-		error: false,
-		success: false,
+		title: 'App One',
 	},
 	methods: {
-		sapa: function(waktu = 'Pagi'){
-			return 'Selamat ' + waktu + ' ' + this.nama;
-		},
-		// Events
-		tambahUmur: function(tambah = 1){
-			this.umur += tambah;
-		},
-		kurangUmur: function(kurang = 1){
-			this.umur -= kurang;
-		},
-		updateXY: function(event){
-			this.X = event.offsetX;
-			this.Y = event.offsetY;
-		},
-		// Computed Properties
-		addToA: function(){
-			console.log('Add To A');
-			return this.umur + this.a;
-		},
-		addToB: function(){
-			console.log('Add To B');
-			return this.umur + this.b;
+
+	},
+	computed: {
+		greet: function(){
+			return 'Hello from App One';
+		}
+	}
+});
+
+var two = new Vue({
+	el: '#vue-app-two',
+	data: {
+		title: 'App Two',
+	},
+	methods: {
+		changeTitle: function(){
+			one.title = 'Title changed!';
 		}
 	},
 	computed: {
-		// Computed Properties
-		addToC: function(){
-			console.log('Add To C');
-			return this.umur + this.c;
-		},
-		// Dynamic CSS Classes
-		compClasses: function(){
-			return {
-				nearby: this.nearby,
-				available: this.available,
-			};
+		greet: function(){
+			return 'Hello from App Two';
 		}
 	}
 });
