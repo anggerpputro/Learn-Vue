@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<app-header></app-header>
-		<app-persons></app-persons>
+		<app-persons v-bind:persons="persons"></app-persons>
 		<app-footer></app-footer>
 	</div>
 </template>
@@ -19,6 +19,13 @@ export default {
 	},
 	data () {
 		return {
+			persons: [
+				{name: 'Angger', age: 24, show: false},
+				{name: 'Angie', age: 19, show: false},
+				{name: 'Angel', age: 8, show: false},
+				{name: 'Eno', age: 21, show: false},
+				{name: 'Neva', age: 18, show: false},
+			]
     	}
 	},
 }

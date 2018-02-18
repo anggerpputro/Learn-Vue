@@ -11,15 +11,14 @@
 
 <script>
 export default {
+	props: {
+		persons: {
+			type: Array,
+			required: true,
+		}
+	},
 	data () {
 		return {
-			persons: [
-				{name: 'Angger', age: 24, show: false},
-				{name: 'Angie', age: 19, show: false},
-				{name: 'Angel', age: 8, show: false},
-				{name: 'Eno', age: 21, show: false},
-				{name: 'Neva', age: 18, show: false},
-			]
 		}
 	}
 }
