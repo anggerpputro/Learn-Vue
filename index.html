@@ -56,6 +56,13 @@
 			<div v-bind:class="compClasses">
 				<span>Angger</span>
 			</div>
+
+			<!-- Conditionals -->
+			<h4>Conditionals</h4>
+			<button v-on:click="error = !error">Toggle Error</button>
+			<button v-on:click="success = !success">Toggle Success</button>
+			<p v-if="error">Error!</p>
+			<p v-else-if="success">Success!</p>
 		</div>
 
 		<script src="app.js"></script>

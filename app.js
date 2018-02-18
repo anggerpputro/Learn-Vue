@@ -18,6 +18,9 @@ new Vue({
 		// Dynamic CSS Classes
 		nearby: false,
 		available: false,
+		// Conditionals
+		error: false,
+		success: false,
 	},
 	methods: {
 		sapa: function(waktu = 'Pagi'){
